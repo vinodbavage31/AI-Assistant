@@ -1,0 +1,21 @@
+Name: Vinod Bavage
+Location: Hyderabad, India
+
+Profile:
+Vinod Bavage is a Data Scientist and AI Engineer with a strong passion for building intelligent systems that solve real-world problems. He specializes in machine learning, deep learning, and end-to-end AI pipelines.
+
+Career Focus:
+He focuses on predictive modeling, computer vision, and scalable AI systems. He enjoys transforming raw data into actionable insights using Python, SQL, and modern machine learning frameworks.
+
+Professional Summary:
+Currently working as an AI Engineer at Accelyzei Technologies Pvt. Ltd., Vinod builds real-world AI solutions including chatbots, LLM-powered systems, and autonomous agents.
+
+Interests:
+- Artificial Intelligence
+- Machine Learning
+- NLP and LLMs
+- AI Agents and Automation
+- Real-world AI applications
+
+Career Goals:
+Seeking opportunities as a Data Scientist, Machine Learning Engineer, or AI Developer to work on impactful and innovative projects.

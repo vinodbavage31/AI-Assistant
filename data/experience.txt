@@ -1,0 +1,23 @@
+Current Role: AI Engineer
+Company: Accelyzei Technologies Pvt. Ltd.
+
+Responsibilities:
+- Building AI-powered chatbots
+- Developing LLM-based pipelines
+- Creating autonomous AI agents
+- Designing NLP systems
+
+Key Skills Applied:
+- LangChain
+- OpenAI API
+- HuggingFace
+- FastAPI
+- Python
+
+
+Internship:
+Company: Rubixe AI Solutions
+
+Role: AI Intern
+Details:
+Worked on real-world AI and machine learning solutions, gaining hands-on experience in applied AI development.

@@ -1,0 +1,56 @@
+Programming Languages:
+- Python
+- SQL
+
+Data Science:
+- Pandas
+- NumPy
+- Data Cleaning
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+
+Machine Learning:
+- Scikit-learn
+- XGBoost
+- Model Evaluation
+- Hyperparameter Tuning
+- SMOTE
+
+Deep Learning:
+- TensorFlow
+- Keras
+- Convolutional Neural Networks (CNNs)
+- Image Classification
+
+Natural Language Processing:
+- Text Classification
+- Semantic Search
+- Embeddings
+- Summarization
+
+AI & LLM Tools:
+- OpenAI API
+- HuggingFace Transformers
+- LangChain (Chains, Agents, RAG)
+
+Databases:
+- MySQL
+- MongoDB
+
+Tools & Platforms:
+- Git & GitHub
+- Docker
+- Jupyter Notebook
+- VS Code
+- Linux
+- AWS
+
+Visualization:
+- Matplotlib
+- Seaborn
+- Power BI
+
+Frameworks:
+- Flask
+- FastAPI
+- Streamlit

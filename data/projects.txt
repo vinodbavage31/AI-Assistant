@@ -1,0 +1,58 @@
+Project: ABC TECH — ITSM Incident Analysis & Prediction
+Description:
+Developed an end-to-end machine learning pipeline analyzing over 45,000 ITSM records.
+
+Key Achievements:
+- 96% prediction accuracy
+- 98% F1-score for identifying risky change requests
+
+Technologies:
+- Python
+- XGBoost
+- SQL
+- Scikit-learn
+- SMOTE
+
+
+Project: Rice Leaf Disease Detection
+Description:
+Built a deep learning-based image classification system to detect rice leaf diseases.
+
+Key Features:
+- Detects 4+ diseases
+- Real-time predictions
+
+Technologies:
+- TensorFlow
+- Keras
+- CNN
+- Computer Vision
+
+
+Project: Game Winner Prediction
+Description:
+Predicts PUBG game outcomes using historical gameplay data.
+
+Technologies:
+- Python
+- Scikit-learn
+- Pandas
+
+
+Project: House Price Prediction
+Description:
+Regression-based model to predict real estate prices using feature engineering.
+
+Technologies:
+- Python
+- Regression Models
+
+
+Project: Bike Rental Analysis
+Description:
+Analyzed and predicted bike rental trends based on time and environmental factors.
+
+Technologies:
+- Python
+- Time Series Analysis
+- Data Visualization
