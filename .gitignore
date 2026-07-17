@@ -1,0 +1,78 @@
+# ==============================================================================
+# Environment Variables & Secrets (CRITICAL)
+# ==============================================================================
+# Never commit credentials, API keys, or private configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+
+# ==============================================================================
+# Dependencies & Package Managers
+# ==============================================================================
+# Node / JavaScript
+node_modules/
+jspm_packages/
+
+# Python
+venv/
+.venv/
+env/
+ENV/
+pyenv/
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# PHP / Composer
+vendor/
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# ==============================================================================
+# Build Outputs & Artifacts
+# ==============================================================================
+# JavaScript / Frontend builds
+dist/
+build/
+.next/
+.nuxt/
+out/
+
+# Java / Kotlin / Scala
+target/
+*.class
+
+# C# / .NET
+bin/
+obj/
+
+# ==============================================================================
+# System & IDE Files
+# ==============================================================================
+# Operating Systems
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+!.vscode/extensions.json  # Keep shared extension recommendations if desired
+
+# WebStorm / IntelliJ
+.idea/
+
+# ==============================================================================
+# Logs and Diagnostics
+# ==============================================================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
