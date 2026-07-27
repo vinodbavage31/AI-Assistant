@@ -20,11 +20,23 @@ DOCS_PATH = BASE_DIR / "docs.pkl"
 class AIService:
     def __init__(self) -> None:
         self.client = AsyncGroq(api_key=settings.GROQ_API_KEY) if settings.GROQ_API_KEY else None
-        self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+        self.embedding_model = None
         self.index = None
         self.documents: list[str] = []
         self.metadata: list[str] = []
         self._load_retrieval_assets()
+
+    def _ensure_embedding_model(self):
+        if self.embedding_model is not None:
+            return self.embedding_model
+
+        try:
+            self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+        except Exception as exc:
+            logger.warning("Embedding model initialization failed: %s", exc)
+            self.embedding_model = None
+
+        return self.embedding_model
 
     def _load_retrieval_assets(self) -> None:
         if INDEX_PATH.exists() and DOCS_PATH.exists():
@@ -45,6 +57,10 @@ class AIService:
     def _build_from_data_files(self) -> None:
         if not DATA_DIR.exists():
             logger.warning("Data directory not found; continuing without retrieval context.")
+            return
+
+        if not self._ensure_embedding_model():
+            logger.warning("Embedding model unavailable; skipping index build.")
             return
 
         text_chunks: list[str] = []
@@ -189,7 +205,7 @@ class AIService:
         )
 
     def _retrieve_context(self, message: str, top_k: int = 6) -> list[str]:
-        if self.index is None or not self.documents:
+        if self.index is None or not self.documents or not self._ensure_embedding_model():
             return []
 
         try:
@@ -206,12 +222,12 @@ class AIService:
             return []
 
     async def generate_response(self, message: str) -> str:
-        if not self.client:
-            raise RuntimeError("GROQ_API_KEY is not configured.")
-
         context_chunks = self._retrieve_context(message, top_k=6)
         if context_chunks:
             return self._build_portfolio_response(message, context_chunks)
+
+        if not self.client:
+            return self._build_portfolio_response(message, [])
 
         prompt = self._build_prompt(message, context_chunks)
 
