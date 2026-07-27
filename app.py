@@ -1,4 +1,5 @@
 import logging
+import os
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,6 +12,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("app")
 
 app = FastAPI(title=settings.APP_TITLE, version=settings.APP_VERSION)
+
+
+def get_port() -> int:
+    raw_port = os.getenv("PORT")
+    if not raw_port:
+        return 8000
+    try:
+        return int(raw_port)
+    except ValueError:
+        return 8000
 
 app.add_middleware(
     CORSMiddleware,
