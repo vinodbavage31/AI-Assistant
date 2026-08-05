@@ -15,5 +15,5 @@ def get_available_port(preferred_port: int) -> int:
 
 
 if __name__ == "__main__":
-    port = get_available_port(get_port())
+    port = get_port()
     uvicorn.run(app, host="0.0.0.0", port=port)
